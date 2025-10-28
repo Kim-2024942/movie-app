@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Gradient Animation (already existing) */
+@keyframes gradient-x {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 8s ease infinite;
+}
+
+/* Floating particle animation for cinematic effect */
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.2;
+  }
+}
+.animate-float {
+  animation-name: float;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* Optional: Glow effect for movie titles or cards */
+.movie-title-glow {
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+  transition: text-shadow 0.3s ease;
+}
+.movie-title-glow:hover {
+  text-shadow: 0 0 20px rgba(255, 0, 0, 1);
+}
